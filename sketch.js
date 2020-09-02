@@ -46,6 +46,11 @@ function setup() {
 function draw() {
   background(0);  
   Engine.update(engine);
+  textSize(20);
+  fill("lightyellow");
+  text("Drag the Hexagonal Stone and Release it, to launch it towards the blocks",100,30);
+  text("Score : " + score,750,50);
+  
   object1.display();
   string01.display();
   platform.display();
@@ -93,6 +98,12 @@ function mouseReleased(){
 score() 
   if(this.visiblity<0 && this.visiblity>-105) {
     score ++
+  }
+
+  function keyPressed() {
+    if (keyCode === 32) {
+      slingShot.attach(this.ball);
+    }
   }
 
 
