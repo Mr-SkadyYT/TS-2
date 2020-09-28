@@ -1,3 +1,5 @@
+var score=0;
+
 const Engine = Matter.Engine;
 const World= Matter.World;
 const Bodies = Matter.Bodies;
@@ -49,7 +51,7 @@ function draw() {
   textSize(20);
   fill("lightyellow");
   text("Drag the Hexagonal Stone and Release it, to launch it towards the blocks",100,30);
-  text("Score : " + score,750,50);
+  text("Score : " + score,700,50);
   
   object1.display();
   string01.display();
@@ -96,13 +98,25 @@ function mouseReleased(){
 }
 
 score() 
-  if(this.visiblity<0 && this.visiblity>-105) {
+  if(box5.y>400) {
+    score ++
+  }
+  if(box4.y>400) {
+    score ++
+  }
+  if(box3.y>400) {
+    score ++
+  }
+  if(box2.y>400) {
+    score ++
+  }
+  if(box1.y>400) {
     score ++
   }
 
   function keyPressed() {
     if (keyCode === 32) {
-      slingShot.attach(this.ball);
+      string01.attach(this.object1);
     }
   }
 
