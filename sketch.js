@@ -116,7 +116,7 @@ score()
 
   function keyPressed() {
     if (keyCode === 32) {
-      string01.attach(this.object1);
+      string01.attach(object1.body);
     }
   }
 

@@ -10,6 +10,8 @@ class Box{
       this.height = 30;
       World.add(world, this.body);
     }
+   
+  
     display(){
       var angle = this.body.angle;
       push();
@@ -22,4 +24,8 @@ class Box{
       rect(0, 0, this.width, this.height);
       pop();
     }
-}
+    
+    }
+    //score(){
+
+    //}
